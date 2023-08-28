@@ -2,9 +2,6 @@
 <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
   <mime-type type="application/lonenote">
     <comment>lonenote</comment>
-    <magic priority="80">
-		<match type="string" offset="0:100" value="lonenote" />
-    </magic>
     <glob pattern="*.lonenote"/>
   </mime-type>
 </mime-info>
