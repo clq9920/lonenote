@@ -3,5 +3,6 @@
   <mime-type type="application/lonenote">
     <comment>lonenote</comment>
     <glob pattern="*.lonenote"/>
+    <generic-icon name="application-lonenote.lonenote" />
   </mime-type>
 </mime-info>
