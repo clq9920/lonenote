@@ -1,20 +1,12 @@
 [Desktop Entry]
 Categories=Development;
-Comment[en_US]=
-Comment=
+Comment=lonenote
 Exec=lonenote %f
 GenericName[en_US]=\s \s
 GenericName=\s \s
 Icon=application-lonenote.lonenote
 MimeType=application/lonenote.lonenote;
-Name[en_US]=lonenote
 Name=lonenote
 StartupNotify=true
 Terminal=false
-TerminalOptions=
 Type=Application
-Version=1.0
-X-DBUS-ServiceName=
-X-DBUS-StartupType=
-X-KDE-SubstituteUID=false
-X-KDE-Username=
