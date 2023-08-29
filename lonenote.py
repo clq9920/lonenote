@@ -546,7 +546,7 @@ QPushButton {
         global openfile
         if(openfile==""):
             # print("~/Documents/"+time.strftime("%y-%m-%d-%H:%M:%S",time.localtime())+".lonenote")
-            geet=QFileDialog.getSaveFileName(self,"文件", os.exdanduser("~/Documents/")+time.strftime("%y-%m-%d-%H-%M-%S",time.localtime())+".lonenote")
+            geet=QFileDialog.getSaveFileName(self,"文件", os.path.expanduser("~/Documents/")+time.strftime("%y-%m-%d-%H-%M-%S",time.localtime())+".lonenote")
             openfile=geet[0]
         else:
             geet=[openfile]
@@ -620,7 +620,7 @@ QPushButton {
         if(openfile==""):
             # print("~/Documents/"+time.strftime("%y-%m-%d-%H:%M:%S",time.localtime())+".lonenote")
             print(os.getenv("home"))
-            geet=QFileDialog.getSaveFileName(self,"文件", os.exdanduser("~/Documents/")+time.strftime("%y-%m-%d-%H-%M-%S",time.localtime())+".lonenote")
+            geet=QFileDialog.getSaveFileName(self,"文件", os.path.expanduser("~/Documents/")+time.strftime("%y-%m-%d-%H-%M-%S",time.localtime())+".lonenote")
             openfile=os.path.splitext(geet[0])[0]+".lonenote"
         else:
             geet=[openfile]
