@@ -131,11 +131,12 @@ QPushButton {
         bt0.mousePressEvent=self.switchhide
         bt0.setStyleSheet(u"font-size:15px")
         # bt0.setMaximumSize(80,40)
-        bt0.setMinimumHeight(32)
-        bt0.setMaximumWidth(80)
+        bt0.setFixedHeight(32)
+        bt0.setFixedWidth(80)
         # self.ly2.addWidget(bt0)
         self.ly2.addWidget(self.wg4)
         self.wg1=QWidget(self.wg4)
+        self.wg1.setFixedWidth(80)
 
 
         # self.ly1=QVBoxLayout(self.wg1)
