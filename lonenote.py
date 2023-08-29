@@ -360,6 +360,8 @@ QPushButton {
         self.qdrawEraser=False
         self.listshowctrlps=[]
 
+        self.bcol=QColor(49,54,59)
+        self.meshcol=QColor(255,255,255)
         # self.saveaspdf()
     # def myQInputMethodEvent(self,event):
     #     print("hhhh")
@@ -395,10 +397,35 @@ QPushButton {
     def setcolw(self,event):#设置白色
         self.inbutton=True
         self.pencol="#ffffff"
+        self.bcol=QColor(49,54,59)
+        self.meshcol=QColor(255,255,255)
+        self.themcol2="#465E65"
+        self.themcol1="#C99E8C"
+        self.setStyleSheet('''
+        background-color: '''+self.themcol2+''';
+        font-size:16px;
+        color:'''+self.themcol1+''';
+QPushButton {
+    background-color: '''+self.themcol2+''';
+}
+        ''')
         self.wg4.update()
     def setcolb(self,event):#设置蓝色
         self.inbutton=True
-        self.pencol="#007acc"
+        # self.pencol="#007acc"
+        self.pencol="#000000"
+        self.bcol=QColor(255,255,255)
+        self.meshcol=QColor(0,0,0)
+        self.themcol2="#FFFFFF"
+        self.themcol1="#000000"
+        self.setStyleSheet('''
+        background-color: '''+self.themcol2+''';
+        font-size:16px;
+        color:'''+self.themcol1+''';
+QPushButton {
+    background-color: '''+self.themcol2+''';
+}
+        ''')
         self.wg4.update()
     def showted(self,event):
         # qhavetext=False
@@ -533,7 +560,7 @@ QPushButton {
         # pdf.setPageSize(QPagedPaintDevice.newPage())
         pter=QPainter()
         pter.begin(pdf)
-        bs=QBrush(QColor(49,54,59))
+        bs=QBrush(self.bcol)
         # pen=QPen(QColor(100,0,100))
         pter.setBrush(bs)
         pter.drawRect(-20,-20,self.wg4.width()+40,self.wg4.height()+40)
@@ -1057,7 +1084,8 @@ QPushButton {
         pter=QPainter(self.wg4)
         # pter.begin(self.wg4)
         # bs=QBrush(QColor(0,0,0,0))
-        bs=QBrush(QColor(49,54,59))
+        bs=QBrush(self.bcol)
+        # bs=QBrush(QColor(49,54,59))
         # bs=QBrush(QColor(0,0,0,10))
         # pen=QPen(QColor(100,0,100))
         pter.setBrush(bs)
@@ -1077,7 +1105,7 @@ QPushButton {
         pen2=pter.pen()
         # pen2.setWidth(1)
         pen2.setWidthF(0.1)
-        pen2.setColor(QColor(255,255,255))
+        pen2.setColor(self.meshcol)
         # pen2.setStyle(Qt.DotLine)
         pter.setPen(pen2)
         sizex=200
